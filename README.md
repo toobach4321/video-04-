@@ -1,39 +1,30 @@
-theme: ThemeData(
-  brightness: Brightness.light,
-  primaryColor: Color(0xFF0A0E21),
-  scaffoldBackgroundColor: Color(0xFFF8F9FA),
-  appBarTheme: AppBarTheme(
-    color: Color(0xFF0A0E21),
-    centerTitle: true,
-    elevation: 4,
-    titleTextStyle: TextStyle(
-      color: Colors.white,
-      fontSize: 22,
-      fontWeight: FontWeight.bold,
-    ),
-  ),
-  inputDecorationTheme: InputDecorationTheme(
-    border: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(12.0),
-    ),
-    filled: true,
-    fillColor: Colors.white,
-    labelStyle: TextStyle(color: Colors.black87),
-  ),
-  elevatedButtonTheme: ElevatedButtonThemeData(
-    style: ElevatedButton.styleFrom(
-      backgroundColor: Color(0xFF0A0E21),
-      foregroundColor: Colors.white,
-      padding: EdgeInsets.symmetric(vertical: 14, horizontal: 20),
-      textStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12.0),
-      ),
-    ),
-  ),
-  textTheme: TextTheme(
-    bodyLarge: TextStyle(fontSize: 18.0),
-    bodyMedium: TextStyle(fontSize: 16.0),
-  ),
-),
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>BMI Calculator</h1>
 
+    <div class="toggle-theme">
+      <label>
+        <input type="checkbox" id="theme-toggle" />
+        <span>🌙 / ☀️</span>
+      </label>
+    </div>
+
+    <div class="calculator">
+      <input type="number" id="weight" placeholder="Weight (kg)" />
+      <input type="number" id="height" placeholder="Height (cm)" />
+      <button onclick="calculateBMI()">Calculate</button>
+      <div id="result"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
